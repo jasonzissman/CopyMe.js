@@ -8,7 +8,7 @@ A demo of CopyMe.js can be seen here: www.jasonzissman.com/copyme/index.html.
 You can download the most recent copy at <a href="https://github.com/jasonzissman/CopyMe.js">the CopyMe Github project</a>.
 
 <h3>Supported Browsers</h3>
-Currently (Feb 5, 2015) only Firefox and Chrome are tested and working.
+Currently (Feb 5, 2015) only Firefox, IE, and Chrome are tested and working.
 
 <h3>How do I use CopyMe.js?</h3>
 Simply include the following lines of code in your page's head element: <br/>
@@ -21,6 +21,7 @@ Simply include the following lines of code in your page's head element: <br/>
     CopyMe.setCutCallback(function(cutText){
       // Do something here when text is cut
     });
+    CopyMe.initialize();
   }
 &lt;/script"&gt;</code></pre>
 
