@@ -8,7 +8,7 @@ A demo of CopyMe.js can be seen here: www.jasonzissman.com/copyme/index.html.
 You can download the most recent copy at <a href="https://github.com/jasonzissman/CopyMe.js">the CopyMe Github project</a>.
 
 <h3>How do I use CopyMe.js?</h3>
-Simply include the following lines of code in your page's head element: <br/><br/>
+Simply include the following lines of code in your page's head element: <br/>
 <pre><code>&lt;script src="CopyMe.js"&gt;&lt;/script"&gt;
 &lt;script type="text/javascript""&gt;
   window.onload = function(){
