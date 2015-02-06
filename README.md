@@ -21,6 +21,6 @@ Simply include the following lines of code in your page's head element: <br/><br
   }
 &lt;/script"&gt;</code></pre>
 
-That's all there is to it!  In addition to defining handlers that handle the copy events, CopyMe lets one review all the text that has been copied or cut by the user.<br/><br/>
+That's all there is to it!  In addition to defining handlers that handle the copy events, CopyMe lets one review all the text that has been copied or cut by the user.<br/>
 <pre><code>CopyMe.getAllCopiedOrCutText();
 CopyMe.getLastCopiedOrCutText();</code></pre>
