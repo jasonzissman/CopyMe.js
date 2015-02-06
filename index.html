@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title>A JavaScript Copy Tracker</title>
+		<script type="text/javascript" src="CopyMe.js"></script>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script type="text/javascript">
+			var updateDisplayedText = function(text){
+				if (text.length > 30){
+					text = text.substring(0,30) + "...";
+				} else if (text == undefined || text.length == 0 || text.trim().length == 0){
+					text = "(Empty copy buffer)";
+				}
+				document.getElementById('copyMessage').textContent = text;
+			};
+			window.onload = function(){
+				CopyMe.setCopyCallback(function(copiedText){
+					updateDisplayedText(copiedText);
+				});
+				CopyMe.setCutCallback(function(cutText){
+					updateDisplayedText(cutText);
+				});
+			}          
+		</script>
+	</head>
+	<body>
+		<div class="top-level-message">
+			<h1>CopyMe.js</h1>
+			<h3>You most recently copied (truncated to 30 characters)</h3>
+		</div>
+		<div class="copy-message">
+			<h1>
+				<span id="copyMessage">(Nothing yet!)</span>
+			</h1>
+		</div>
+		<div>
+			<h3>Demo</h3>
+			The area above displays any text that is copied or cut from the web page to the user's clipboard.  It uses 
+			CopyMe.js to receive copy/cut events (whether done by mouse of keyboard shortcuts). Such information can 
+			prove useful - it could help detect potential plagiarism, help determine what portions of a page's content 
+			is most useful to viewers, or simply provide metrics for how users are engaging with a page.
+		</div>
+		<div>
+			<h3>CopyMe.js</h3>
+			CopyMe.js is a JavaScript library that enables a web page to easily monitor what text is being copied from it.			
+		</div>
+		<div>
+			<h3>Where do I get CopyMe.js?</h3>
+			You can download the most recent copy at <a href="https://github.com/jasonzissman/CopyMe.js">the CopyMe Github project</a>.
+		</div>
+		<div>
+			<h3>How do I use CopyMe.js?</h3>
+			Simply include the following lines of code in your page's head element: <br/><br/>
+			<div class="code-block"><pre><code>&lt;script src="CopyMe.js"&gt;&lt;/script"&gt;
+&lt;script type="text/javascript""&gt;
+  window.onload = function(){
+    CopyMe.setCopyCallback(function(copiedText){
+      // Do something here when text is copied
+    });
+    CopyMe.setCutCallback(function(cutText){
+      // Do something here when text is cut
+    });
+  }
+&lt;/script"&gt;</code></pre>
+			</div><br/>
+			That's all there is to it!  In addition to defining handlers that handle the copy events,
+			CopyMe lets one review all the text that has been copied or cut by the user.<br/><br/>
+			<div class="code-block"><pre><code>CopyMe.getAllCopiedOrCutText();
+CopyMe.getLastCopiedOrCutText();</code></pre>
+		</div>		
+	</body>	
+</html>
