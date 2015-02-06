@@ -7,6 +7,9 @@ A demo of CopyMe.js can be seen here: www.jasonzissman.com/copyme/index.html.
 <h3>Where do I get CopyMe.js?</h3>
 You can download the most recent copy at <a href="https://github.com/jasonzissman/CopyMe.js">the CopyMe Github project</a>.
 
+<h3>Supported Browsers</h3>
+Currently (Feb 5, 2015) only Firefox and Chrome are tested and working.
+
 <h3>How do I use CopyMe.js?</h3>
 Simply include the following lines of code in your page's head element: <br/>
 <pre><code>&lt;script src="CopyMe.js"&gt;&lt;/script"&gt;
