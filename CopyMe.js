@@ -32,17 +32,19 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		},
 		getLastCopiedOrCutText: function(){
 			return CopyMe.copiedText[CopyMe.copiedText.length-1];
+		},
+		initialize: function() {
+			document.body.oncopy = function(){
+				var highlightedText = window.getSelection().toString();
+				CopyMe.copiedText.push(highlightedText);
+				CopyMe.copyCallback(highlightedText);
+			};
+			document.body.oncut = function(){
+				var highlightedText = window.getSelection().toString();
+				CopyMe.copiedText.push(highlightedText);
+				CopyMe.cutCallback(highlightedText);
+			};
 		}
-	};
-	document.oncopy = function(){
-		var highlightedText = window.getSelection().toString();
-		CopyMe.copiedText.push(highlightedText);
-		CopyMe.copyCallback(highlightedText);
-	};
-	document.oncut = function(){
-		var highlightedText = window.getSelection().toString();
-		CopyMe.copiedText.push(highlightedText);
-		CopyMe.cutCallback(highlightedText);
 	};
 	if (typeof define === "function" && define.amd) {
 		define(function() {

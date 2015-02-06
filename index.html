@@ -1,8 +1,8 @@
 <html>
 	<head>
 		<title>A JavaScript Copy Tracker</title>
-		<script type="text/javascript" src="CopyMe.js"></script>
 		<link rel="stylesheet" type="text/css" href="index.css">
+		<script type="text/javascript" src="CopyMe.js"></script>
 		<script type="text/javascript">
 			var updateDisplayedText = function(text){
 				if (text.length > 30){
@@ -19,8 +19,9 @@
 				CopyMe.setCutCallback(function(cutText){
 					updateDisplayedText(cutText);
 				});
+				CopyMe.initialize();
 			}          
-		</script>
+		</script>		
 	</head>
 	<body>
 		<div class="top-level-message">
@@ -48,6 +49,10 @@
 			You can download the most recent copy at <a href="https://github.com/jasonzissman/CopyMe.js">the CopyMe Github project</a>.
 		</div>
 		<div>
+			<h3>Supported Browsers</h3>
+			Currently (Feb 5, 2015) only Firefox, IE, and Chrome are tested and working.
+		</div>
+		<div>
 			<h3>How do I use CopyMe.js?</h3>
 			Simply include the following lines of code in your page's head element: <br/><br/>
 			<div class="code-block"><pre><code>&lt;script src="CopyMe.js"&gt;&lt;/script"&gt;
@@ -59,6 +64,7 @@
     CopyMe.setCutCallback(function(cutText){
       // Do something here when text is cut
     });
+	CopyMe.initialize();
   }
 &lt;/script"&gt;</code></pre>
 			</div><br/>
